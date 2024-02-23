@@ -1,0 +1,44 @@
+.loader-container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 951px; 
+  /* background: #22395c; */
+}
+
+.loader {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  animation: rotateAnimation 1s linear infinite;
+}
+
+.loader::before {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #8c8c8c, #dfc8ea);
+  animation: scaleAnimation 1s infinite alternate;
+}
+
+.loader::after {
+  content: '';
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #e6e6e6, #fff);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes rotateAnimation {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes scaleAnimation {
+  0% { transform: scale(1); }
+  100% { transform: scale(0.7); }
+}
