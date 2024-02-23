@@ -10,6 +10,7 @@ import Bookings from "../Bookings/Bookings";
 function Home() {
   const [activeItem, setActiveItem] = useState("Products");
   const { id } = useParams();
+  
   const navigate = useNavigate();
 
   const handleItemClick = (item) => {
