@@ -95,7 +95,7 @@ function Index() {
     setAdminLoginLoading(true);
 
     try {
-      const response = await axios.post("https://peak-alpha-backend.onrender.com/admin/login", {
+      const response = await axios.post("http://localhost:5000/admin/login", {
         adminUsername: username,
         adminPassword: password,
       });
